@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY webapp/ ./webapp/
 COPY ["qsar_model_xgboost_(maccs).pkl", "./qsar_model_xgboost_(maccs).pkl"]
 
-EXPOSE 8080
+EXPOSE 7860
 
-# Railway injeta $PORT automaticamente; fallback 8080 para outros ambientes.
-CMD ["sh", "-c", "gunicorn --chdir webapp --bind 0.0.0.0:${PORT:-8080} --workers 2 --timeout 120 app:app"]
+# Hugging Face Spaces expõe a porta 7860 por padrão; fallback 7860 para outros ambientes.
+CMD ["sh", "-c", "gunicorn --chdir webapp --bind 0.0.0.0:${PORT:-7860} --workers 2 --timeout 120 app:app"]
