@@ -1,5 +1,5 @@
 // =============================================
-// GLP-1 Virtual Screener — Frontend Logic
+// GLP1R Activity Predictor — Frontend Logic
 // =============================================
 
 // Global error handler to surface any JS issues
@@ -8,7 +8,7 @@ window.addEventListener('error', function(event) {
     console.error(event);
 });
 console.log('App.js loaded');
-    console.log("GLP-1 Screener Initializing...");
+    console.log("GLP1R Activity Predictor Initializing...");
 
     const API_BASE = window.API_BASE_URL || (window.location.protocol === 'file:' ? 'http://127.0.0.1:5000' : '');
     let allResults = [];
